@@ -1,24 +1,28 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BsFillInboxFill } from 'react-icons/bs';
+import { GiStamper } from 'react-icons/gi';
+import IconLabelButton from './components/IconLabelButton';
 
-const App: React.FC = function () {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 className="text-2xl">IconLabelButton</h1>
+      <IconLabelButton
+        text="QuestBoard"
+        icon={<BsFillInboxFill className="h-4 w-4" />}
+        iconColor="bg-green-400"
+      />
+      <IconLabelButton
+        text="ApproveRequest"
+        icon={<GiStamper className="h-4 w-4" />}
+        iconColor="bg-blue-400"
+      />
+      <IconLabelButton
+        text="Quest"
+        icon={<BsFillInboxFill className="h-4 w-4" />}
+        iconColor="bg-green-400"
+      />
     </div>
   );
 };
