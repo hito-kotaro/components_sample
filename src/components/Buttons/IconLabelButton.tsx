@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { ReactElement, VFC } from 'react';
+import { IoIosArrowForward } from 'react-icons/io';
 import useButtonAction from './useButtonAction';
 
 type Props = {
@@ -20,8 +21,13 @@ const IconLabelButton: VFC<Props> = (props) => {
       onClick={() => displayConsole(path)}
     >
       <div className="flex">
-        <div className={`${iconColor} h-8 w-8 rounded-lg p-2`}>{icon}</div>
-        <div className="border-b-1 w-full text-left ml-2">{text}</div>
+        <div className={`${iconColor} rounded-lg p-2`}>{icon}</div>
+        <div className="border-b-1 w-full ml-2 flex">
+          {text}
+          <div className="ml-auto p-2">
+            <IoIosArrowForward color="#BFBFBF" />
+          </div>
+        </div>
       </div>
     </button>
   );
