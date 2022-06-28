@@ -2,7 +2,10 @@
 import React from 'react';
 import { BsFillInboxFill } from 'react-icons/bs';
 import { GiStamper } from 'react-icons/gi';
-import IconLabelButton from './components/IconLabelButton';
+import { AiOutlineHistory, AiOutlineUser } from 'react-icons/ai';
+import { RiTeamLine } from 'react-icons/ri';
+import { GrUserWorker } from 'react-icons/gr';
+import IconLabelButton from './components/Buttons/IconLabelButton';
 
 const App = () => {
   return (
@@ -19,9 +22,24 @@ const App = () => {
         iconColor="bg-blue-400"
       />
       <IconLabelButton
-        text="Quest"
-        icon={<BsFillInboxFill className="h-4 w-4" />}
-        iconColor="bg-green-400"
+        text="TimeLine"
+        icon={<AiOutlineHistory className="h-4 w-4" />}
+        iconColor="bg-yellow-400"
+      />
+      <IconLabelButton
+        text="Teams"
+        icon={<RiTeamLine className="h-4 w-4" />}
+        iconColor="bg-purple-400"
+      />
+      <IconLabelButton
+        text="Users"
+        icon={<AiOutlineUser className="h-4 w-4" />}
+        iconColor="bg-orange-400"
+      />
+      <IconLabelButton
+        text="Jobs"
+        icon={<GrUserWorker className="h-4 w-4" />}
+        iconColor="bg-gray-400"
       />
     </div>
   );
