@@ -13,7 +13,7 @@ const SelectForm: VFC<Props> = (props) => {
   return (
     <Select label="Select label" onChange={handleChange}>
       {selectItemList.map((item: SelectItem) => (
-        <Select.Option value="2">{item.itemText}</Select.Option>
+        <Select.Option value={item.value}>{item.itemText}</Select.Option>
       ))}
     </Select>
   );
