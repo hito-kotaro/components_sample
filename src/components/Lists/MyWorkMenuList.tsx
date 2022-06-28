@@ -7,6 +7,7 @@ import { RiTeamLine } from 'react-icons/ri';
 import IconLabelButton from '../Buttons/IconLabelButton';
 
 const MyWorkMenuList = () => {
+  const space = 2;
   return (
     <fieldset className="border-1 p-2 rounded-lg">
       <legend className="ml-2">MyWorkMenu</legend>
@@ -17,7 +18,7 @@ const MyWorkMenuList = () => {
         path="/questboard"
       />
 
-      <div className="h-4" />
+      <div className={`h-${space}`} />
 
       <IconLabelButton
         text="ApproveRequest"
@@ -26,7 +27,7 @@ const MyWorkMenuList = () => {
         path="/approverequest"
       />
 
-      <div className="h-4" />
+      <div className={`h-${space}`} />
 
       <IconLabelButton
         text="TimeLine"
@@ -35,7 +36,7 @@ const MyWorkMenuList = () => {
         path="/timeline"
       />
 
-      <div className="h-4" />
+      <div className={`h-${space}`} />
 
       <IconLabelButton
         text="Teams"
@@ -44,7 +45,7 @@ const MyWorkMenuList = () => {
         path="/teams"
       />
 
-      <div className="h-4" />
+      <div className={`h-${space}`} />
 
       <IconLabelButton
         text="Users"
@@ -53,7 +54,7 @@ const MyWorkMenuList = () => {
         path="/users"
       />
 
-      <div className="h-4" />
+      <div className={`h-${space}`} />
 
       <IconLabelButton
         text="Jobs"
