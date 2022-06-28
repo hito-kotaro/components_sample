@@ -13,37 +13,37 @@ const App = () => {
       <h1 className="text-2xl">IconLabelButton</h1>
       <IconLabelButton
         text="QuestBoard"
-        icon={<BsFillInboxFill className="h-4 w-4" />}
+        icon={<BsFillInboxFill />}
         iconColor="bg-green-400"
         path="/questboard"
       />
       <IconLabelButton
         text="ApproveRequest"
-        icon={<GiStamper className="h-4 w-4" />}
+        icon={<GiStamper />}
         iconColor="bg-blue-400"
         path="/approverequest"
       />
       <IconLabelButton
         text="TimeLine"
-        icon={<AiOutlineHistory className="h-4 w-4" />}
+        icon={<AiOutlineHistory />}
         iconColor="bg-yellow-400"
         path="/timeline"
       />
       <IconLabelButton
         text="Teams"
-        icon={<RiTeamLine className="h-4 w-4" />}
+        icon={<RiTeamLine />}
         iconColor="bg-purple-400"
         path="/teams"
       />
       <IconLabelButton
         text="Users"
-        icon={<AiOutlineUser className="h-4 w-4" />}
+        icon={<AiOutlineUser />}
         iconColor="bg-orange-400"
         path="/users"
       />
       <IconLabelButton
         text="Jobs"
-        icon={<GrUserWorker className="h-4 w-4" />}
+        icon={<GrUserWorker />}
         iconColor="bg-gray-400"
         path="/jobs"
       />
