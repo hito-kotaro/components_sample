@@ -22,7 +22,7 @@ const PrimaryListItem: VFC<Props> = (props) => {
         />
       </div>
 
-      <div className="w-3/5">
+      <div className="w-3/5 text-left">
         <div className="text-sm text-gray-500 whitespace-nowrap truncate">
           {owner}/{title}
         </div>
