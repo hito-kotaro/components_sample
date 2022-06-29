@@ -1,17 +1,21 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { ChangeEvent, useState } from 'react';
+import { AiOutlineSearch } from 'react-icons/ai';
 import { IconClipboard, IconCopy, IconTrash, Badge } from '@supabase/ui';
 import MyWorkMenuList from './components/Lists/MyWorkMenuList';
 import DropDown from './components/DropDown/DropDown';
 import { DropDownItem } from './types/DropDownItemType';
 import SelectForm from './components/SelectForm/SelectForm';
+import SearchForm from './components/SearchForm/SearchForm';
 import PrimaryButton from './components/Buttons/PrimaryButton';
 import PrimaryListItem from './components/ListItem/PrimaryListItem';
 import useButtonAction from './components/Buttons/useButtonAction';
+import useSearchForm from './components/SearchForm/useSearchForm';
 import type { primaryListItem } from './types/ListItemTypes';
 
 const App = () => {
   const [value, setValue] = useState('two');
+  const searchHandler = useSearchForm();
   const { echoConsole, echoPrimaryListItem } = useButtonAction();
 
   const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
@@ -72,6 +76,12 @@ const App = () => {
         <div className="w-11/12">
           <MyWorkMenuList />
         </div>
+      </div>
+
+      <hr className="my-5 border-1 border-black" />
+      <h1 className="text-2xl">SearchForm</h1>
+      <div className="w-11/12 mx-auto">
+        <SearchForm searchHandler={searchHandler} />
       </div>
 
       <hr className="my-5 border-1 border-black" />
