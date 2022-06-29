@@ -8,10 +8,14 @@ type Props = {
 };
 const SelectForm: VFC<Props> = (props) => {
   const { selectItemList } = props;
-  const { value, handleChange } = useSelectForm();
+  const { handleChange } = useSelectForm();
 
   return (
-    <Select label="Select label" onChange={handleChange}>
+    <Select
+      // label="Select label
+      onChange={handleChange}
+      className="text-red-700"
+    >
       {selectItemList.map((item: SelectItem) => (
         <Select.Option value={item.value}>{item.itemText}</Select.Option>
       ))}

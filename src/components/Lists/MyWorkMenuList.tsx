@@ -9,7 +9,7 @@ import IconLabelButton from '../Buttons/IconLabelButton';
 const MyWorkMenuList = () => {
   const space = 2;
   return (
-    <fieldset className="border-1 p-2 rounded-lg">
+    <fieldset className="border-1 p-2 rounded-lg light-color">
       <legend className="ml-2">MyWorkMenu</legend>
       <IconLabelButton
         text="QuestBoard"

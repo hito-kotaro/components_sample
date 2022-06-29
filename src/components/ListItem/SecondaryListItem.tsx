@@ -1,23 +1,21 @@
-import React, { ReactElement, VFC } from 'react';
 import Avatar from 'boring-avatars';
+import React, { ReactElement, VFC } from 'react';
 
 type Props = {
-  iconName: string;
+  userName: string;
   topText: string;
-  bottomText: string | ReactElement;
-  righetUpText: string;
-  rightBottomText: string | ReactElement;
+  bottomText: ReactElement;
+  rightUpText: string;
 };
 
-const PrimaryListItem: VFC<Props> = (props) => {
-  const { iconName, topText, bottomText, righetUpText, rightBottomText } =
-    props;
+const SecondaryListItem: VFC<Props> = (props) => {
+  const { userName, topText, bottomText, rightUpText } = props;
   return (
     <div className="flex border-b-1 px-3 py-1">
       <div className="w-1/5 ">
         <Avatar
-          size={44}
-          name={iconName}
+          size={32}
+          name={userName}
           variant="beam"
           colors={['#FFBD87', '#FFD791', '#F7E8A6', '#D9E8AE', '#BFE3C0']}
         />
@@ -29,12 +27,11 @@ const PrimaryListItem: VFC<Props> = (props) => {
         </div>
         <div className="text-lg  whitespace-nowrap truncate">{bottomText}</div>
       </div>
-      <div className="text-right text-gray-400">
-        <div>{righetUpText}</div>
-        <div>{rightBottomText}</div>
+      <div className="text-right text-gray-400 ml-auto">
+        <div>{rightUpText}</div>
       </div>
     </div>
   );
 };
 
-export default PrimaryListItem;
+export default SecondaryListItem;
