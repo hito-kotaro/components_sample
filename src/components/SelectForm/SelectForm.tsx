@@ -1,19 +1,18 @@
 import React, { VFC } from 'react';
 import { Select } from '@supabase/ui';
-import useSelectForm from './useSelectForm';
 import type { SelectItem } from '../../types/SelectItemType';
 
 type Props = {
   selectItemList: SelectItem[];
+  selectHandler: any;
 };
 const SelectForm: VFC<Props> = (props) => {
-  const { selectItemList } = props;
-  const { handleChange } = useSelectForm();
+  const { selectItemList, selectHandler } = props;
 
   return (
     <Select
       // label="Select label
-      onChange={handleChange}
+      onChange={selectHandler.handleChange}
       className="text-red-700"
     >
       {selectItemList.map((item: SelectItem) => (

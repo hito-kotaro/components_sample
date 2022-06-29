@@ -8,6 +8,7 @@ import PrimaryButton from '../components/Buttons/PrimaryButton';
 import useButtonAction from '../components/Buttons/useButtonAction';
 import UserCard from '../components/Cards/UserCard';
 import DropDown from '../components/DropDown/DropDown';
+import CategoryHeader from '../components/Headers/CategoryHeader';
 import PrimaryListItem from '../components/ListItem/PrimaryListItem';
 import SecondaryListItem from '../components/ListItem/SecondaryListItem';
 import MyWorkMenuList from '../components/Lists/MyWorkMenuList';
@@ -15,12 +16,14 @@ import ScoreLabel from '../components/Scores/ScoreLabel';
 import SearchForm from '../components/SearchForm/SearchForm';
 import useSearchForm from '../components/SearchForm/useSearchForm';
 import SelectForm from '../components/SelectForm/SelectForm';
+import useSelectForm from '../components/SelectForm/useSelectForm';
 import { DropDownItem } from '../types/DropDownItemType';
 import { primaryListItem } from '../types/ListItemTypes';
 
 const HomePage = () => {
   const [value, setValue] = useState('two');
   const searchHandler = useSearchForm();
+  const selectHandler = useSelectForm();
   const { echoConsole, echoPrimaryListItem } = useButtonAction();
 
   const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
@@ -74,25 +77,18 @@ const HomePage = () => {
     },
   ];
 
+  const buttonAction = () => {
+    console.log('hello');
+  };
   return (
     <div>
-      <div className="sticky top-0 z-50 bg-white drop-shadow-md p-2">
-        <div className="flex">
-          <BackLink to="/component" linkText="ホーム" />
-          <div className="ml-auto">
-            <button type="button" className="border-2 border-link rounded-full">
-              <IoIosAdd size={24} color="#4B72E0" />
-            </button>
-          </div>
-        </div>
-        <div>
-          <h1 className="text-2xl font-semibold">QuestBoard</h1>
-          <SearchForm searchHandler={searchHandler} />
-          <div className="w-1/3 mt-2 ml-auto">
-            <SelectForm selectItemList={selectItemList} />
-          </div>
-        </div>
-      </div>
+      <CategoryHeader
+        title="Quest Board"
+        searchHandler={searchHandler}
+        selectHandler={selectHandler}
+        onClick={buttonAction}
+        selectItemList={selectItemList}
+      />
 
       <div className="h-3" />
       <div className="w-11/12 mx-auto">
@@ -120,7 +116,10 @@ const HomePage = () => {
 
       <hr className="my-5 border-1 border-black" />
       <h1 className="text-2xl">Select</h1>
-      <SelectForm selectItemList={selectItemList} />
+      <SelectForm
+        selectItemList={selectItemList}
+        selectHandler={selectHandler}
+      />
 
       <hr className="my-5 border-1 border-black" />
 
