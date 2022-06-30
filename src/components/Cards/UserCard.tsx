@@ -1,5 +1,5 @@
-import Avatar from 'boring-avatars';
 import React, { VFC } from 'react';
+import MyAvatar from '../MyAvatar/MyAvatar';
 import ScoreLabel from '../Scores/ScoreLabel';
 
 type Props = {
@@ -12,12 +12,7 @@ const UserCard: VFC<Props> = (props) => {
   return (
     <div className="border-1 rounded-lg p-2 light-color">
       <div className="flex">
-        <Avatar
-          size={48}
-          name={userName}
-          variant="beam"
-          colors={['#FFBD87', '#FFD791', '#F7E8A6', '#D9E8AE', '#BFE3C0']}
-        />
+        <MyAvatar size={48} name={userName} />
         <div className="ml-5 leading-12 text-xl">{`${team}/${userName}`}</div>
       </div>
       <div className="h-12" />
