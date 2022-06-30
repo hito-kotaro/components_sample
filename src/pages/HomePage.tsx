@@ -1,5 +1,6 @@
 import { IconClipboard, IconCopy, IconTrash, Badge } from '@supabase/ui';
 import React, { ChangeEvent, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import useButtonAction from '../components/Buttons/useButtonAction';
 import UserCard from '../components/Cards/UserCard';
 import DropDown from '../components/DropDown/DropDown';
@@ -11,9 +12,11 @@ import { DropDownItem } from '../types/DropDownItemType';
 import { primaryListItem } from '../types/ListItemTypes';
 
 const HomePage = () => {
+  const navigate = useNavigate();
   const [value, setValue] = useState('two');
+
   const onClick = () => {
-    console.log('test');
+    navigate('/test');
   };
 
   const itemList: DropDownItem[] = [

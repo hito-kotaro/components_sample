@@ -1,4 +1,5 @@
 import React, { ReactElement, VFC } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { BsThreeDots } from 'react-icons/bs';
 import { Button, Divider, Dropdown, Typography } from '@supabase/ui';
 import { DropDownItem } from '../../types/DropDownItemType';
@@ -8,8 +9,10 @@ type Props = {
 };
 const DropDown: VFC<Props> = (props) => {
   const { itemList } = props;
+  const navigate = useNavigate();
+
   const onClick = () => {
-    console.log('test');
+    navigate('/test');
   };
 
   return (
@@ -23,10 +26,7 @@ const DropDown: VFC<Props> = (props) => {
         </>
       ))}
     >
-      <Button
-        type="text"
-        icon={<BsThreeDots size={24} className=" forcus:outline-none" />}
-      />
+      <Button type="text" icon={<BsThreeDots size={24} className=" forcus:outline-none" />} />
     </Dropdown>
   );
 };
