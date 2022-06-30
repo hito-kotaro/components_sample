@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { primaryListItem } from '../../types/ListItemTypes';
 
 const useButtonAction = () => {
+  const navigate = useNavigate();
+
   const displayConsole = (path: string) => {
     console.log(`next path=>${path}`);
   };
@@ -13,7 +16,11 @@ const useButtonAction = () => {
   const echoPrimaryListItem = (item: primaryListItem) => {
     console.log(item);
   };
-  return { displayConsole, echoConsole, echoPrimaryListItem };
+
+  const navigatePage = (path: string) => {
+    navigate(path);
+  };
+  return { displayConsole, echoConsole, echoPrimaryListItem, navigatePage };
 };
 
 export default useButtonAction;

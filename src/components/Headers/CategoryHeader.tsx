@@ -5,11 +5,11 @@ import SearchForm from '../SearchForm/SearchForm';
 import SelectForm from '../SelectForm/SelectForm';
 
 type Props = {
+  title: string;
   searchHandler: any;
-  selectHandler: any;
   onClick: () => void;
   selectItemList?: { value: string; itemText: string }[];
-  title: string;
+  selectHandler?: any;
 };
 const CategoryHeader: VFC<Props> = (props) => {
   const { title, searchHandler, selectHandler, onClick, selectItemList } =

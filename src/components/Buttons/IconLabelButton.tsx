@@ -12,14 +12,10 @@ type Props = {
 
 const IconLabelButton: VFC<Props> = (props) => {
   const { text, icon, iconColor, path } = props;
-  const { displayConsole } = useButtonAction();
+  const { displayConsole, navigatePage } = useButtonAction();
 
   return (
-    <button
-      type="button"
-      className="w-full"
-      onClick={() => displayConsole(path)}
-    >
+    <button type="button" className="w-full" onClick={() => navigatePage(path)}>
       <div className="flex">
         <div className={`${iconColor} rounded-lg p-2`}>{icon}</div>
         <div className="border-b-1 w-full ml-2 flex">

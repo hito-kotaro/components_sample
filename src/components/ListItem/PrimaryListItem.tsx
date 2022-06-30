@@ -13,7 +13,7 @@ const PrimaryListItem: VFC<Props> = (props) => {
   const { iconName, topText, bottomText, righetUpText, rightBottomText } =
     props;
   return (
-    <div className="flex border-b-1 px-3 py-1">
+    <div className="flex border-b-1 px-3 py-1 bg-white">
       <div className="w-1/5 ">
         <Avatar
           size={44}

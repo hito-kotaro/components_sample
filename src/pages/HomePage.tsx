@@ -82,15 +82,6 @@ const HomePage = () => {
   };
   return (
     <div>
-      <CategoryHeader
-        title="Quest Board"
-        searchHandler={searchHandler}
-        selectHandler={selectHandler}
-        onClick={buttonAction}
-        selectItemList={selectItemList}
-      />
-
-      <div className="h-3" />
       <div className="w-11/12 mx-auto">
         <UserCard team="luxy" userName="kotaro" />
       </div>
