@@ -92,7 +92,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <hr className="my-5 border-1 border-black" />
+      {/* <hr className="my-5 border-1 border-black" />
       <h1 className="text-2xl">SearchForm</h1>
       <div className="w-11/12 mx-auto">
         <SearchForm searchHandler={searchHandler} />
@@ -156,7 +156,7 @@ const HomePage = () => {
       </button>
       <hr className="my-5 border-1 border-black" />
       <h1 className="text-2xl">ScoreBadge</h1>
-      <ScoreLabel point={10} penalty={100} />
+      <ScoreLabel point={10} penalty={100} /> */}
     </div>
   );
 };

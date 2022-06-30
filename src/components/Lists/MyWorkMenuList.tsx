@@ -1,6 +1,6 @@
 import React from 'react';
 import { AiOutlineHistory, AiOutlineUser } from 'react-icons/ai';
-import { BsFillInboxFill } from 'react-icons/bs';
+import { BsBuilding, BsFillInboxFill } from 'react-icons/bs';
 import { GiStamper } from 'react-icons/gi';
 import { GrUserWorker } from 'react-icons/gr';
 import { RiTeamLine } from 'react-icons/ri';
@@ -13,7 +13,7 @@ const MyWorkMenuList = () => {
       <legend className="ml-2">MyWorkMenu</legend>
       <IconLabelButton
         text="QuestBoard"
-        icon={<BsFillInboxFill />}
+        icon={<BsFillInboxFill color="#ffffff" />}
         iconColor="bg-green-400"
         path="/questboard"
       />
@@ -22,7 +22,7 @@ const MyWorkMenuList = () => {
 
       <IconLabelButton
         text="ApproveRequest"
-        icon={<GiStamper />}
+        icon={<GiStamper color="#ffffff" />}
         iconColor="bg-blue-400"
         path="/approverequest"
       />
@@ -40,7 +40,7 @@ const MyWorkMenuList = () => {
 
       <IconLabelButton
         text="Teams"
-        icon={<RiTeamLine />}
+        icon={<RiTeamLine color="#ffffff" />}
         iconColor="bg-purple-400"
         path="/teams"
       />
@@ -49,7 +49,7 @@ const MyWorkMenuList = () => {
 
       <IconLabelButton
         text="Users"
-        icon={<AiOutlineUser />}
+        icon={<AiOutlineUser color="#ffffff" />}
         iconColor="bg-orange-400"
         path="/users"
       />
@@ -57,8 +57,8 @@ const MyWorkMenuList = () => {
       <div className={`h-${space}`} />
 
       <IconLabelButton
-        text="Jobs"
-        icon={<GrUserWorker />}
+        text="Orgnization"
+        icon={<BsBuilding color="#ffffff" />}
         iconColor="bg-gray-400"
         path="/jobs"
       />
