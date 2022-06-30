@@ -4,6 +4,7 @@ import { DropDownItem } from '../../types/DropDownItemType';
 import BackLink from '../BackLink';
 import DropDown from '../DropDown/DropDown';
 import IconLabel from '../IconLabel/IconLabel';
+import HeaderLink from '../Links/HeaderLink';
 
 type Props = {
   itemList: DropDownItem[];
@@ -17,7 +18,7 @@ const DetailHeadler: VFC<Props> = (props) => {
   return (
     <div className=" lead sticky top-0 z-50 bg-base drop-shadow-md p-2">
       <div className="flex ">
-        <BackLink to="/" linkText="" />
+        <HeaderLink to="/" linkText="" backIcon />
         <div className="w-full text-center leading-8">{headerName}</div>
         <div className="ml-auto">
           <DropDown itemList={itemList} />

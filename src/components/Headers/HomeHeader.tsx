@@ -1,6 +1,7 @@
 import React, { VFC } from 'react';
 import { IoIosAdd } from 'react-icons/io';
 import BackLink from '../BackLink';
+import HeaderLink from '../Links/HeaderLink';
 import SearchForm from '../SearchForm/SearchForm';
 import SelectForm from '../SelectForm/SelectForm';
 
@@ -18,7 +19,7 @@ const HomeHeader: VFC<Props> = (props) => {
   return (
     <div className="sticky top-0 z-50 bg-white drop-shadow-md p-2">
       <div className="flex">
-        <BackLink to="/" linkText="ホーム" />
+        <HeaderLink to="/" linkText="ホーム" />
         <div className="ml-auto">
           <button onClick={onClick} type="button" className="border-2 border-link rounded-full">
             <IoIosAdd size={24} color="#4B72E0" />
