@@ -11,10 +11,12 @@ type Props = {
   selectItemList?: { value: string; itemText: string }[];
   selectHandler?: any;
 };
-const CategoryHeader: VFC<Props> = (props) => {
-  const { title, searchHandler, selectHandler, onClick, selectItemList } = props;
+
+const HomeHeader: VFC<Props> = (props) => {
+  const { title, searchHandler, onClick, selectItemList, selectHandler } = props;
+
   return (
-    <div className="sticky top-0 z-50 bg-base drop-shadow-md p-2">
+    <div className="sticky top-0 z-50 bg-white drop-shadow-md p-2">
       <div className="flex">
         <BackLink to="/" linkText="ホーム" />
         <div className="ml-auto">
@@ -38,4 +40,4 @@ const CategoryHeader: VFC<Props> = (props) => {
   );
 };
 
-export default CategoryHeader;
+export default HomeHeader;

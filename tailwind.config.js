@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        base: '#F1F3F5',
         link: '#4B72E0',
       },
       lineHeight: {

@@ -2,6 +2,8 @@ import { IconClipboard, IconCopy, IconTrash, Badge } from '@supabase/ui';
 import React, { ChangeEvent, useState } from 'react';
 import useButtonAction from '../components/Buttons/useButtonAction';
 import UserCard from '../components/Cards/UserCard';
+import DropDown from '../components/DropDown/DropDown';
+import HomeHeader from '../components/Headers/HomeHeader';
 import MyWorkMenuList from '../components/Lists/MyWorkMenuList';
 import useSearchForm from '../components/SearchForm/useSearchForm';
 import useSelectForm from '../components/SelectForm/useSelectForm';
@@ -18,7 +20,7 @@ const HomePage = () => {
     { icon: <IconClipboard />, onClick, text: 'Duplicate', divider: false },
     { icon: <IconCopy />, onClick, text: 'Copy', divider: false },
     { icon: <IconTrash />, onClick, text: 'Trash', divider: false },
-    { icon: <IconClipboard />, onClick, text: 'TEST!!', divider: true },
+    { icon: <IconClipboard />, onClick, text: 'Logout', divider: true },
   ];
 
   const selectItemList = [
@@ -60,9 +62,25 @@ const HomePage = () => {
 
   return (
     <div>
+      <div className="sticky top-0 z-50 bg-base drop-shadow-md p-2">
+        <div className="flex">
+          <div className="text-3xl font-semibold">ホーム</div>
+          <div className="ml-auto">
+            <DropDown itemList={itemList} />
+          </div>
+        </div>
+      </div>
+
+      <div className="h-6" />
+      {/* <h1 className="font-mono text-3xl font-semibold ml-3">ホーム</h1> */}
+
+      <div className="h-5" />
       <div className="w-11/12 mx-auto">
         <UserCard team="luxy" userName="kotaro" />
       </div>
+
+      <div className="h-5" />
+      <h1 className="text-2xl font-semibold ml-3">自分の作業</h1>
 
       <div className="flex justify-center">
         <div className="w-11/12">
