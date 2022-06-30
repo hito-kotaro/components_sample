@@ -7,14 +7,15 @@ import { RiTeamLine } from 'react-icons/ri';
 import IconLabelButton from '../Buttons/IconLabelButton';
 
 const MyWorkMenuList = () => {
-  const space = 2;
+  const space = 3;
   return (
-    <fieldset className="border-1 p-2 rounded-lg light-color">
-      <legend className="ml-2">MyWorkMenu</legend>
+    <div className="border-1 p-2 rounded-lg light-color">
+      <div className={`h-${space}`} />
+
       <IconLabelButton
         text="QuestBoard"
         icon={<BsFillInboxFill color="#ffffff" />}
-        iconColor="bg-green-400"
+        iconColor="bg-green-500"
         path="/questboard"
       />
 
@@ -23,7 +24,7 @@ const MyWorkMenuList = () => {
       <IconLabelButton
         text="ApproveRequest"
         icon={<GiStamper color="#ffffff" />}
-        iconColor="bg-blue-400"
+        iconColor="bg-blue-500"
         path="/approverequest"
       />
 
@@ -41,7 +42,7 @@ const MyWorkMenuList = () => {
       <IconLabelButton
         text="Teams"
         icon={<RiTeamLine color="#ffffff" />}
-        iconColor="bg-purple-400"
+        iconColor="bg-purple-500"
         path="/teams"
       />
 
@@ -50,7 +51,7 @@ const MyWorkMenuList = () => {
       <IconLabelButton
         text="Users"
         icon={<AiOutlineUser color="#ffffff" />}
-        iconColor="bg-orange-400"
+        iconColor="bg-orange-500"
         path="/users"
       />
 
@@ -59,10 +60,10 @@ const MyWorkMenuList = () => {
       <IconLabelButton
         text="Job"
         icon={<TbTie color="#ffffff" />}
-        iconColor="bg-gray-400"
+        iconColor="bg-gray-500"
         path="/jobs"
       />
-    </fieldset>
+    </div>
   );
 };
 

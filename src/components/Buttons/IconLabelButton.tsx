@@ -18,7 +18,7 @@ const IconLabelButton: VFC<Props> = (props) => {
     <button type="button" className="w-full" onClick={() => navigatePage(path)}>
       <div className="flex">
         <div className={`${iconColor} rounded-lg p-2`}>{icon}</div>
-        <div className="border-b-1 w-full ml-2 flex">
+        <div className="border-b-1 w-full ml-5 flex">
           {text}
           <div className="ml-auto p-2">
             <IoIosArrowForward color="#BFBFBF" />
