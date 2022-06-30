@@ -1,8 +1,8 @@
 import React from 'react';
 import { AiOutlineHistory, AiOutlineUser } from 'react-icons/ai';
-import { BsBuilding, BsFillInboxFill } from 'react-icons/bs';
+import { BsFillInboxFill } from 'react-icons/bs';
 import { GiStamper } from 'react-icons/gi';
-import { GrUserWorker } from 'react-icons/gr';
+import { TbTie } from 'react-icons/tb';
 import { RiTeamLine } from 'react-icons/ri';
 import IconLabelButton from '../Buttons/IconLabelButton';
 
@@ -57,8 +57,8 @@ const MyWorkMenuList = () => {
       <div className={`h-${space}`} />
 
       <IconLabelButton
-        text="Orgnization"
-        icon={<BsBuilding color="#ffffff" />}
+        text="Job"
+        icon={<TbTie color="#ffffff" />}
         iconColor="bg-gray-400"
         path="/jobs"
       />
